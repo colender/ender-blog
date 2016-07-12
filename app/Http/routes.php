@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::group(['prefix'=>'blog'],function(){
+  Route::get('blog','PostContoller@index');
+});

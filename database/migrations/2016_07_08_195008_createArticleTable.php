@@ -20,6 +20,7 @@ class CreateArticleTable extends Migration
             $table->string('slug')->index();
             $table->integer('created_by')->unsigned();
             $table->foreign('created_by')->references('id')->on('users');
+            $table->timestamps();
 
 
         });
